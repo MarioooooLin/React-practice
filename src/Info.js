@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/style.css";
 
-const Info = ({ name, age }) => {
-    console.log(name, age);
-    let friends = ["Mario", "Maria", "Max"];
-    let test = [1, 2, 3, 4];
-    const aaa = () => {
-        console.log("Hello");
-        return 100000;
+const Info = () => {
+    // console.log(name, age);
+    // let friends = ["Mario", "Maria", "Max"];
+    // let test = [1, 2, 3, 4];
+    // const aaa = () => {
+    //     console.log("Hello");
+    //     return 100000;
+    // };
+    let [name, setName] = useState("Mario");
+    let age = 28;
+    const change = () => {
+        setName("Mr.Mario");
     };
     return (
         <div className='Info'>
             <h1>Friend's name:{name}</h1>
             <h1>Friend's age:{age}</h1>
-
+            <button onClick={change}>Change name</button>
             {/* <h1>This is Info component.</h1>
             <h1>{1234567890}</h1>
             <h2>{77 * 66}</h2>
