@@ -1,7 +1,8 @@
 import React from "react";
 import "./styles/style.css";
 
-const Info = () => {
+const Info = ({ name, age }) => {
+    console.log(name, age);
     let friends = ["Mario", "Maria", "Max"];
     let test = [1, 2, 3, 4];
     const aaa = () => {
@@ -10,7 +11,10 @@ const Info = () => {
     };
     return (
         <div className='Info'>
-            <h1>This is Info component.</h1>
+            <h1>Friend's name:{name}</h1>
+            <h1>Friend's age:{age}</h1>
+
+            {/* <h1>This is Info component.</h1>
             <h1>{1234567890}</h1>
             <h2>{77 * 66}</h2>
             <h3>{Math.random()}</h3>
@@ -22,7 +26,7 @@ const Info = () => {
             <p>{test}</p>
             {friends.map((friend) => (
                 <p>My friend is {friend}</p>
-            ))}
+            ))} */}
         </div>
     );
 };
