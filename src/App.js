@@ -9,6 +9,11 @@ function App() {
         { name: "CC", age: "33" },
     ];
     let myFriend = "E";
+
+    const clickButton = (msg) => {
+        alert("You clicked the button...");
+        alert(msg);
+    };
     return (
         <div>
             <h1>This is h1 tag</h1>
@@ -21,6 +26,21 @@ function App() {
             {test1.map((test2) => (
                 <Info name={test2.name} age={test2.age} />
             ))}
+            <button
+                onClick={() => {
+                    clickButton("Today is a good day");
+                }}
+            >
+                Click please
+            </button>
+            <button
+                onClick={() => {
+                    clickButton();
+                }}
+            >
+                test 3
+            </button>
+            <button onClick={clickButton}>SIMPLE</button>
         </div>
     );
 }
