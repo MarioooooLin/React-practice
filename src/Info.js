@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles/style.css";
 
-const Info = () => {
+const Info = ({ msg, setMsg }) => {
     // console.log(name, age);
     // let friends = ["Mario", "Maria", "Max"];
     // let test = [1, 2, 3, 4];
@@ -16,6 +16,9 @@ const Info = () => {
     };
     return (
         <div className='Info'>
+            {msg.map((msgs, index) => {
+                return <p key={index}>Content is : {msgs}</p>;
+            })}
             <h1>Friend's name:{name}</h1>
             <h1>Friend's age:{age}</h1>
             <button onClick={change}>Change name</button>

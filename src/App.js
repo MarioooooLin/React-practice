@@ -1,7 +1,11 @@
-import Nav from "./Nav";
+//import Nav from "./Nav";
+import React, { useState } from "react";
 import Info from "./Info";
+import Create from "./Create";
 
 function App() {
+    let [msg, setMsg] = useState([]);
+
     // let friends = ["A", "B", "C", "D"];
     // let test1 = [
     //     { name: "AA", age: "28" },
@@ -17,7 +21,8 @@ function App() {
     return (
         <div>
             <h1>This is h1 tag</h1>
-            <Nav />
+            {/* <Nav /> */}
+            <Create msg={msg} setMsg={setMsg} />
             {/* <Info />
             <Info name={friends[0]} age={15} />
             <Info name={friends[1]} age={20} />
@@ -41,7 +46,7 @@ function App() {
                 test 3
             </button>
             <button onClick={clickButton}>SIMPLE</button> */}
-            <Info />
+            <Info msg={msg} setMsg={setMsg} />
         </div>
     );
 }
