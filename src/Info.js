@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles/style.css";
 
 const Info = () => {
     let friends = ["Mario", "Maria", "Max"];
@@ -8,7 +9,7 @@ const Info = () => {
         return 100000;
     };
     return (
-        <div>
+        <div className='Info'>
             <h1>This is Info component.</h1>
             <h1>{1234567890}</h1>
             <h2>{77 * 66}</h2>

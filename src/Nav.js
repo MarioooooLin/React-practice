@@ -2,15 +2,18 @@ import React from "react";
 
 const Nav = () => {
     return (
-        <nav>
+        <nav style={({ color: "red" }, { backgroundColor: "yellow" })}>
             <ul>
                 <li>
-                    <a href='#'>INDEX</a>
+                    <a href='#' style={{ color: "red" }}>
+                        INDEX
+                    </a>
                 </li>
                 <li>
-                    <a href='#'>PAGE</a>
+                    <a href='#' style={{ color: "red" }}>
+                        PAGE
+                    </a>
                 </li>
-
             </ul>
         </nav>
     );
